@@ -1,12 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace PPR.Domain.Models {
-    public class Role {
-
-        public short RoleId { get; set; }
-        public string RoleName { get; set; }
-        public string RoleDescription { get; set; }
-
-        public virtual ICollection<User> Users { get; set; }
+    public class Role : IdentityRole<int> {
+        public string Description { get; set; }
     }
 }
