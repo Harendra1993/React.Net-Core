@@ -4,25 +4,34 @@ using Microsoft.Extensions.Configuration;
 using PPR.App.DTOs.User;
 using System.IdentityModel.Tokens.Jwt;
 using PPR.Domain.Models;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace PPR.App.JwtHelpers
 {
 
     public static class JwtExtensions
     {
-        public static void GenerateToken(this User user, IConfiguration config)
+        public static string GenerateToken(this User user, IConfiguration config)
         {
             try
             {
-                var token = new JwtTokenBuilder()
-                    .AddSecurityKey(JwtSecurityKey.Create(config["Jwt:Key"]))
-                    .AddIssuer(config["Jwt:Issuer"])
-                    .AddAudience(config["Jwt:Audience"])
-                    .AddExpiry(20)
-                    .AddClaim(JwtRegisteredClaimNames.Sub, user.UserName)
-                    .AddClaim(JwtRegisteredClaimNames.Email, user.Email)
-                    // .AddRoles(user.UserRoles)
-                    .Build();
+                var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+                var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+                var claims = new[] {
+                             new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                             new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                             };
+
+                var token = new JwtSecurityToken(config["Jwt:Issuer"],
+                                                config["Jwt:Audience"],
+                                                claims,
+                                                expires: DateTime.Now.AddMinutes(20),
+                                                signingCredentials: credentials);
+
+                return new JwtSecurityTokenHandler().WriteToken(token);
             }
             catch (Exception)
             {
