@@ -11,7 +11,7 @@ namespace PPR.App.JwtHelpers
     public class JwtTokenBuilder
     {
         private SecurityKey securityKey = null;
-        private string subject = "1";
+        private string subject;
         private string issuer = "";
         private string audience = "";
         private List<Claim> claims = new List<Claim>();
@@ -87,7 +87,6 @@ namespace PPR.App.JwtHelpers
             EnsureArguments();
 
             var claims = new List<Claim> {
-                    new Claim (JwtRegisteredClaimNames.Sub, this.subject),
                     new Claim (JwtRegisteredClaimNames.Jti, Guid.NewGuid ().ToString ())
                 }
             .Union(this.claims);
