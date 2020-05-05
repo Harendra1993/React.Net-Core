@@ -35,7 +35,7 @@ namespace PPR.Controllers
 
         #endregion
 
-        [HttpPost]
+        [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO model)
         {
             var result = await signInManager.PasswordSignInAsync(model.Username, model.Password, false, false);
@@ -70,14 +70,8 @@ namespace PPR.Controllers
             }
         }
 
-        public async Task<IActionResult> SignOut()
-        {
-            await signInManager.SignOutAsync();
-            return Ok(true);
-        }
-
-        [HttpPost("signup")]
-        public async Task<IActionResult> SignUp(UserDTO model)
+        [HttpPost("create")]
+        public async Task<IActionResult> Create(UserDTO model)
         {
             User user = new User
             {
@@ -95,13 +89,21 @@ namespace PPR.Controllers
                     var r = await userManager.AddToRoleAsync(user, role.Name);
                     if (r.Succeeded)
                     {
-                        return RedirectToAction("Message");
+                        return Ok(new CustomResponse<UserDTO> { Message = Global.ResponseMessages.Success, StatusCode = StatusCodes.Status200OK, Result = model });
                     }
                 }
+
             }
 
-            return Ok(true);
+            return Ok(new CustomResponse<string> { Message = Global.ResponseMessages.BadRequest, StatusCode = StatusCodes.Status400BadRequest, Result = "Some thing wrong with your Request." });
+
         }
 
+        [HttpGet("logout")]
+        public async Task<IActionResult> LogOut()
+        {
+            await signInManager.SignOutAsync();
+            return Ok(true);
+        }
     }
 }
