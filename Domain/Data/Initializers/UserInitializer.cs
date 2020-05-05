@@ -13,15 +13,17 @@ namespace PPR.Domain.Data.Initializers
                 {
                     Id = 1,
                     Email = "test@test.com",
-                    UserName = "Test",
-                    PasswordHash = "test",
+                    UserName = "test",
+                    // Password= Asd@123
+                    PasswordHash = "AQAAAAEAACcQAAAAEJWdViD56zYRK9pJJ1pfybqp43gpMcLTKgJP8fuo6j2HwSV9RnovwwE+8I4to1HgSw==",
                 },
                 new User
                 {
                     Id = 2,
                     Email = "admin@test.com",
-                    UserName = "Admin",
-                    PasswordHash = "admin",
+                    UserName = "admin",
+                    // Password= Asd@123
+                    PasswordHash = "AQAAAAEAACcQAAAAEJWdViD56zYRK9pJJ1pfybqp43gpMcLTKgJP8fuo6j2HwSV9RnovwwE+8I4to1HgSw==",
                 }
             );
         }

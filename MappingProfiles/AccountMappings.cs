@@ -9,7 +9,7 @@ namespace PPR.App.MappingProfiles
     {
         public AccountMappings()
         {
-            CreateMap<User, UserDTO>().ReverseMap();
+            // CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<User, UserCreateDTO>().ReverseMap();
             CreateMap<User, UserUpdateDTO>().ReverseMap();
             //CreateMap<UserRole, UserRoleDTO>().ReverseMap();

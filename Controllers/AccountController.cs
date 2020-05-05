@@ -70,43 +70,38 @@ namespace PPR.Controllers
             }
         }
 
-        // public IActionResult SignUp()
-        // {
-        //     return View();
-        // }
+        public async Task<IActionResult> SignOut()
+        {
+            await signInManager.SignOutAsync();
+            return Ok(true);
+        }
 
-        // public async Task<IActionResult> SignOut()
-        // {
-        //     await signInManager.SignOutAsync();
-        //     return View();
-        // }
+        [HttpPost("signup")]
+        public async Task<IActionResult> SignUp(UserDTO model)
+        {
+            User user = new User
+            {
+                Email = model.Email,
+                UserName = model.UserName,
+                PhoneNumber = model.PhoneNumber
+            };
+            var ressult = await userManager.CreateAsync(user, model.Password);
+            if (ressult.Succeeded)
+            {
+                // var role = await roleManager.FindByNameAsync("Admin");
+                var role = await roleManager.FindByNameAsync("User");
+                if (role != null)
+                {
+                    var r = await userManager.AddToRoleAsync(user, role.Name);
+                    if (r.Succeeded)
+                    {
+                        return RedirectToAction("Message");
+                    }
+                }
+            }
 
-        // [HttpPost]
-        // public async Task<IActionResult> SignUp(UserViewModel model)
-        // {
-        //     User user = new User
-        //     {
-        //         Email = model.Email,
-        //         UserName = model.UserName,
-        //         PhoneNumber = model.PhoneNumber
-        //     };
-        //     var ressult = await userManager.CreateAsync(user, model.Password);
-        //     if (ressult.Succeeded)
-        //     {
-        //         // var role = await roleManager.FindByNameAsync("Admin");
-        //         var role = await roleManager.FindByNameAsync("User");
-        //         if (role != null)
-        //         {
-        //             var r = await userManager.AddToRoleAsync(user, role.Name);
-        //             if (r.Succeeded)
-        //             {
-        //                 return RedirectToAction("Message");
-        //             }
-        //         }
-        //     }
-
-        //     return View();
-        // }
+            return Ok(true);
+        }
 
     }
 }
