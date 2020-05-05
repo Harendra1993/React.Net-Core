@@ -35,6 +35,7 @@ namespace PPR.Controllers
 
         #endregion
 
+        #region Actions
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO model)
         {
@@ -105,5 +106,6 @@ namespace PPR.Controllers
             await signInManager.SignOutAsync();
             return Ok(true);
         }
+        #endregion
     }
 }
