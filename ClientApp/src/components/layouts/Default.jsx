@@ -9,7 +9,7 @@ export class Default extends Component {
 
   render() {
     return (
-      <div>
+      <div class="main-wrapper main-wrapper-1">
         <NavMenu />
         <Container>
           {this.props.children}

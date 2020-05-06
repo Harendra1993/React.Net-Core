@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
 import PropTypes from "prop-types"
 
 export class Blank extends Component {
-    static displayName = Default.name;
+    static displayName = Blank.name;
 
     render() {
         return (
