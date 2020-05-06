@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import SideMenu from './SideMenu';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import './NavMenu.css';
+import './TopMenu.css';
 
-export class NavMenu extends Component {
-  static displayName = NavMenu.name;
+export default class TopMenu extends Component {
 
   constructor(props) {
     super(props);
@@ -169,7 +167,6 @@ export class NavMenu extends Component {
             </li>
           </ul>
         </nav>
-        <SideMenu />
       </>
     );
   }

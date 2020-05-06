@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import PropTypes from "prop-types"
 
-import { NavMenu } from '../NavMenu';
+import { TopMenu, SideMenu } from '../menu';
 
 export class Default extends Component {
   static displayName = Default.name;
@@ -10,7 +10,8 @@ export class Default extends Component {
   render() {
     return (
       <div class="main-wrapper main-wrapper-1">
-        <NavMenu />
+        <TopMenu />
+        <SideMenu />
         <Container>
           {this.props.children}
         </Container>
