@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom';
 import { useLocalStorage, useEffectOnce } from 'react-use';
 
-import './App.scss';
+// import './App.scss';
 
 // const DeepDive = lazy(() => import('./components/deepdive'));
 // const FAQ = lazy(() => import('./components/faq'));
