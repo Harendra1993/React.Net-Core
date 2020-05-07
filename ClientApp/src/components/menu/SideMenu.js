@@ -1,11 +1,12 @@
 import React from 'react'
+import config from '../../config';
 
 export default function SideMenu() {
     return (
         <div className="main-sidebar sidebar-style-2">
             <aside id="sidebar-wrapper">
                 <div className="sidebar-brand">
-                    <a href="index.html"> <img alt="image" src="assets/img/logo.png" className="header-logo" /> <span className="logo-name">Otika</span>
+                    <a href="index.html"> <span className="logo-name">{config.app.name}</span>
                     </a>
                 </div>
                 <ul className="sidebar-menu">
