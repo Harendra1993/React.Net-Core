@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
+import { Container } from 'react-bootstrap';
 import PropTypes from "prop-types"
 
 export class Blank extends Component {

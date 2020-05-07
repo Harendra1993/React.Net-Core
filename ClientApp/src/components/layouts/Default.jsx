@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
+import { Container } from 'react-bootstrap';
 import PropTypes from "prop-types"
 
 import { TopMenu, SideMenu } from '../menu';
@@ -9,7 +9,7 @@ export class Default extends Component {
 
   render() {
     return (
-      <div class="main-wrapper main-wrapper-1">
+      <div className="main-wrapper main-wrapper-1">
         <TopMenu />
         <SideMenu />
         <Container>
