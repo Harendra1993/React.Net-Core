@@ -13,12 +13,9 @@ import {
 import { useLocalStorage, useEffectOnce } from 'react-use';
 
 // import './App.scss';
-
-// const DeepDive = lazy(() => import('./components/deepdive'));
-// const FAQ = lazy(() => import('./components/faq'));
-// const PatientDB = lazy(() => import('./components/patientdb'));
-// const Resources = lazy(() => import('./components/resources'));
-// const State = lazy(() => import('./components/state'));
+const Login = lazy(() => import('./components/account/Login'));
+const CreateAccount = lazy(() => import('./components/account/Create'));
+const ListAccounts = lazy(() => import('./components/account/List'));
 
 
 
@@ -31,27 +28,27 @@ function App() {
       animationDelayForNavbar: 0.2,
       showInNavbar: true,
     },
-    // {
-    //   pageLink: '/demographics',
-    //   view: PatientDB,
-    //   displayName: 'Demographics',
-    //   animationDelayForNavbar: 0.3,
-    //   showInNavbar: true,
-    // },
-    // {
-    //   pageLink: '/deepdive',
-    //   view: DeepDive,
-    //   displayName: 'Deep Dive',
-    //   animationDelayForNavbar: 0.4,
-    //   showInNavbar: true,
-    // },
-    // {
-    //   pageLink: '/essentials',
-    //   view: Resources,
-    //   displayName: 'Essentials',
-    //   animationDelayForNavbar: 0.5,
-    //   showInNavbar: true,
-    // },
+    {
+      pageLink: '/login',
+      view: Login,
+      displayName: 'Login',
+      animationDelayForNavbar: 0.3,
+      showInNavbar: true,
+    },
+    {
+      pageLink: '/account/create',
+      view: CreateAccount,
+      displayName: 'Create Account',
+      animationDelayForNavbar: 0.4,
+      showInNavbar: true,
+    },
+    {
+      pageLink: '/account',
+      view: ListAccounts,
+      displayName: 'Users List',
+      animationDelayForNavbar: 0.5,
+      showInNavbar: true,
+    },
     // {
     //   pageLink: '/faq',
     //   view: FAQ,
@@ -109,11 +106,11 @@ function App() {
           <Route
             render={({ location }) => (
               <div className="Almighty-Router">
-                <Navbar
+                {/* <Navbar
                   pages={pages}
                   darkMode={darkMode}
                   setDarkMode={setDarkMode}
-                />
+                /> */}
                 <Switch location={location}>
                   {pages.map((page, index) => {
                     return (

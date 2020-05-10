@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as Icon from 'react-feather';
 //import { Link } from 'react-router-dom';
 import './TopMenu.css';
 
@@ -25,8 +26,9 @@ export default class TopMenu extends Component {
         <nav className="navbar navbar-expand-lg main-navbar sticky">
           <div className="form-inline mr-auto">
             <ul className="navbar-nav mr-3">
-              <li><a href="#" data-toggle="sidebar" className="nav-link nav-link-lg
-									collapse-btn"> <i data-feather="align-justify" /></a></li>
+              <li>
+                <a href="#" data-toggle="sidebar" className="nav-link nav-link-lg
+									collapse-btn"> <Icon.AlignJustify className="feather" /></a></li>
               <li><a href="#" className="nav-link nav-link-lg fullscreen-btn">
                 <i data-feather="maximize" />
               </a></li>
