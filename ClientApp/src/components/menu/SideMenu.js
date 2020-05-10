@@ -26,35 +26,20 @@ export default function SideMenu() {
                         </Link>
                     </li>
                     <li className="dropdown">
-                        <a href="#" className="menu-toggle nav-link has-dropdown"><Icon.Briefcase {...activeNavIcon('/')} className="feather" /><span>Widgets</span></a>
-                        {/* <ul className="dropdown-menu">
-                            <li><a className="nav-link" href="widget-chart.html">Chart Widgets</a></li>
-                            <li><a className="nav-link" href="widget-data.html">Data Widgets</a></li>
-                        </ul> */}
-                        <Dropdown className="dropdown-menu">
-
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </li>
-                    <li className="dropdown">
-                        <a href="#" className="menu-toggle nav-link has-dropdown"><i data-feather="command" /><span>Apps</span></a>
+                        <a href="#" className="menu-toggle nav-link has-dropdown"><Icon.Briefcase {...activeNavIcon('/')} className="feather" /><span>Actions</span></a>
                         <ul className="dropdown-menu">
-                            <li><a className="nav-link" href="chat.html">Chat</a></li>
-                            <li><a className="nav-link" href="portfolio.html">Portfolio</a></li>
-                            <li><a className="nav-link" href="blog.html">Blog</a></li>
-                            <li><a className="nav-link" href="calendar.html">Calendar</a></li>
+                            <li><a className="nav-link" href="widget-chart.html">Upload</a></li>
+                            <li><a className="nav-link" href="widget-data.html">Edit</a></li>
                         </ul>
                     </li>
+
                     <li className="dropdown">
-                        <a href="#" className="menu-toggle nav-link has-dropdown"><i data-feather="mail" /><span>Email</span></a>
+                        <a href="#" className="menu-toggle nav-link has-dropdown"><Icon.Activity {...activeNavIcon('/')} className="feather" /><span>Analysis</span></a>
                         <ul className="dropdown-menu">
-                            <li><a className="nav-link" href="email-inbox.html">Inbox</a></li>
-                            <li><a className="nav-link" href="email-compose.html">Compose</a></li>
-                            <li><a className="nav-link" href="email-read.html">read</a></li>
+                            <li><a className="nav-link" href="widget-chart.html">Overall Analysis</a></li>
+                            <li><a className="nav-link" href="widget-data.html">Team Chart</a></li>
+                            <li><a className="nav-link" href="widget-data.html">Assignment Chart</a></li>
+                            <li><a className="nav-link" href="widget-data.html">Scorecard</a></li>
                         </ul>
                     </li>
                 </ul>
