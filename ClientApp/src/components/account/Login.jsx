@@ -1,6 +1,7 @@
 import React from 'react'
+import { TextInput } from '../common'
 
-export default function Login() {
+export default function Login({ onChange, errors }) {
     return (
         <section className="section">
             <div className="container mt-5">
@@ -11,36 +12,34 @@ export default function Login() {
                                 <h4>Login</h4>
                             </div>
                             <div className="card-body">
-                                <form method="POST" action="#" className="needs-validation" novalidate="">
-                                    <div className="form-group">
-                                        <label for="email">Email</label>
-                                        <input id="email" type="email" className="form-control" name="email" tabindex="1" required autofocus />
-                                        <div className="invalid-feedback">
-                                            Please fill in your email
-                                        </div>
-                                    </div>
+                                <form className="needs-validation">
+                                    <TextInput
+                                        name="email"
+                                        label="Email"
+                                        onChange={onChange}
+                                        error={errors} />
                                     <div className="form-group">
                                         <div className="d-block">
-                                            <label for="password" className="control-label">Password</label>
+                                            <label htmlFor="password" className="control-label">Password</label>
                                             <div className="float-right">
                                                 <a href="auth-forgot-password.html" className="text-small">
                                                     Forgot Password?
                                                  </a>
                                             </div>
                                         </div>
-                                        <input id="password" type="password" className="form-control" name="password" tabindex="2" required />
+                                        <input id="password" type="password" className="form-control" name="password" tabIndex="2" required />
                                         <div className="invalid-feedback">
                                             please fill in your password
                     </div>
                                     </div>
                                     <div className="form-group">
                                         <div className="custom-control custom-checkbox">
-                                            <input type="checkbox" name="remember" className="custom-control-input" tabindex="3" id="remember-me" />
-                                            <label className="custom-control-label" for="remember-me">Remember Me</label>
+                                            <input type="checkbox" name="remember" className="custom-control-input" tabIndex="3" id="remember-me" />
+                                            <label className="custom-control-label" htmlFor="remember-me">Remember Me</label>
                                         </div>
                                     </div>
                                     <div className="form-group">
-                                        <button type="submit" className="btn btn-primary btn-lg btn-block" tabindex="4">
+                                        <button type="submit" className="btn btn-primary btn-lg btn-block" tabIndex="4">
                                             Login
                                         </button>
                                     </div>
