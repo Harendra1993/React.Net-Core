@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function TextInput({ name, label, onChange, placeholder, value, error }) {
+function TextInput({ name, label, onChange, placeholder, value, required = false, disabled = false, error }) {
     let wrapperClass = 'form-group';
     if (error && error.length > 0) {
         wrapperClass += " " + 'has-error';
@@ -16,7 +16,9 @@ function TextInput({ name, label, onChange, placeholder, value, error }) {
                     className="form-control"
                     placeholder={placeholder}
                     value={value}
-                    onChange={onChange} />
+                    onChange={onChange}
+                    required={required}
+                    disabled={disabled} />
                 {error && (<div className="invalid-feedback">{error}</div>)}
             </div>
         </div>
@@ -28,6 +30,8 @@ TextInput.propTypes = {
     label: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     placeholder: PropTypes.string,
+    required: PropTypes.bool,
+    disabled: PropTypes.bool,
     value: PropTypes.string,
     error: PropTypes.string
 }

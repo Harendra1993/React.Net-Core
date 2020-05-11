@@ -17,6 +17,7 @@ export default function Login({ onChange, errors }) {
                                         name="email"
                                         label="Email"
                                         onChange={onChange}
+                                        required={true}
                                         error={errors} />
                                     <div className="form-group">
                                         <div className="d-block">
