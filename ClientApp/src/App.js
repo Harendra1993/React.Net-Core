@@ -1,69 +1,16 @@
-import { Home } from './components/Home';
 import Navbar from './components/navbar';
 import ScrollToTop from './utils/ScrollToTop';
 
 import React, { Suspense, lazy } from 'react';
 // import {Helmet} from 'react-helmet';
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { useLocalStorage, useEffectOnce } from 'react-use';
 
-// import './App.scss';
-const Login = lazy(() => import('./components/account/Login'));
-const CreateAccount = lazy(() => import('./components/account/Create'));
-const ListAccounts = lazy(() => import('./components/account/List'));
-
+import Routes from './routes';
 
 
 function App() {
-  const pages = [
-    {
-      pageLink: '/',
-      view: Home,
-      displayName: 'Home',
-      animationDelayForNavbar: 0.2,
-      showInNavbar: true,
-    },
-    {
-      pageLink: '/login',
-      view: Login,
-      displayName: 'Login',
-      animationDelayForNavbar: 0.3,
-      showInNavbar: true,
-    },
-    {
-      pageLink: '/account/create',
-      view: CreateAccount,
-      displayName: 'Create Account',
-      animationDelayForNavbar: 0.4,
-      showInNavbar: true,
-    },
-    {
-      pageLink: '/account',
-      view: ListAccounts,
-      displayName: 'Users List',
-      animationDelayForNavbar: 0.5,
-      showInNavbar: true,
-    },
-    // {
-    //   pageLink: '/faq',
-    //   view: FAQ,
-    //   displayName: 'FAQ',
-    //   animationDelayForNavbar: 0.6,
-    //   showInNavbar: true,
-    // },
-    // {
-    //   pageLink: '/state/:stateCode',
-    //   view: State,
-    //   displayName: 'State',
-    //   animationDelayForNavbar: 0.7,
-    //   showInNavbar: false,
-    // },
-  ];
+
 
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
   const [isThemeSet] = useLocalStorage('isThemeSet', false);
@@ -100,35 +47,10 @@ function App() {
         </script>
       </Helmet> */}
 
-      <Router>
+      <Router >
         <ScrollToTop />
         <Suspense fallback={<div className="lazy"></div>}>
-          <Route
-            render={({ location }) => (
-              <div className="Almighty-Router">
-                {/* <Navbar
-                  pages={pages}
-                  darkMode={darkMode}
-                  setDarkMode={setDarkMode}
-                /> */}
-                <Switch location={location}>
-                  {pages.map((page, index) => {
-                    return (
-                      <Route
-                        exact
-                        path={page.pageLink}
-                        render={({ match }) => (
-                          <page.view key={match.params.stateCode || index} />
-                        )}
-                        key={index}
-                      />
-                    );
-                  })}
-                  <Redirect to="/" />
-                </Switch>
-              </div>
-            )}
-          />
+          <Routes />
         </Suspense>
       </Router>
     </div>
