@@ -7,7 +7,7 @@ const CreateAccount = lazy(() => import('./components/account/Create'));
 const ListAccounts = lazy(() => import('./components/account/List'));
 
 
-function Routes(props) {
+function Routes() {
     const pages = [
         {
             pageLink: '/',
@@ -50,8 +50,8 @@ function Routes(props) {
                                 <Route
                                     exact
                                     path={page.pageLink}
-                                    render={({ match }) => (
-                                        <page.view {...props} key={match.params.stateCode || index} />
+                                    render={(props) => (
+                                        <page.view {...props} key={props.match.params.stateCode || index} />
                                     )}
                                     key={index}
                                 />
