@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Create() {
+export default function Create(props) {
     return (
         <section className="section">
             <div className="container mt-5">

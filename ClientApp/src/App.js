@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 // import {Helmet} from 'react-helmet';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { useLocalStorage, useEffectOnce } from 'react-use';
+import { history } from '@/utils';
 import ScrollToTop from './utils/ScrollToTop';
 
 
@@ -47,7 +48,7 @@ function App() {
         </script>
       </Helmet> */}
 
-      <Router >
+      <Router history={history}>
         <ScrollToTop />
         <Suspense fallback={<div className="lazy"></div>}>
           <Routes />

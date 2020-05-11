@@ -7,7 +7,7 @@ const CreateAccount = lazy(() => import('./components/account/Create'));
 const ListAccounts = lazy(() => import('./components/account/List'));
 
 
-function Routes() {
+function Routes(props) {
     const pages = [
         {
             pageLink: '/',
@@ -42,6 +42,7 @@ function Routes() {
     return (
         <Route
             render={({ location }) => (
+
                 <div className="Almighty-Router">
                     <Switch location={location}>
                         {pages.map((page, index) => {
@@ -50,7 +51,7 @@ function Routes() {
                                     exact
                                     path={page.pageLink}
                                     render={({ match }) => (
-                                        <page.view key={match.params.stateCode || index} />
+                                        <page.view {...props} key={match.params.stateCode || index} />
                                     )}
                                     key={index}
                                 />
