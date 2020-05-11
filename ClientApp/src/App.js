@@ -1,10 +1,10 @@
-import Navbar from './components/navbar';
-import ScrollToTop from './utils/ScrollToTop';
 
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 // import {Helmet} from 'react-helmet';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { useLocalStorage, useEffectOnce } from 'react-use';
+import ScrollToTop from './utils/ScrollToTop';
+
 
 import Routes from './routes';
 
