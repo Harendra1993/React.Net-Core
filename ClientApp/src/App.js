@@ -6,7 +6,7 @@ import { useLocalStorage, useEffectOnce } from 'react-use';
 import ScrollToTop from './utils/ScrollToTop';
 
 
-import Routes from './routes';
+import Routes from '@/routes';
 
 
 function App() {

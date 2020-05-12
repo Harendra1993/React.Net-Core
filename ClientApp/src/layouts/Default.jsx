@@ -11,7 +11,7 @@ export class Default extends Component {
       <div className="main-wrapper main-wrapper-1">
         <TopMenu />
         <SideMenu />
-        <div class="main-content" style={{ minHeight: "356px" }}>
+        <div className="main-content" style={{ minHeight: "356px" }}>
           {this.props.children}
         </div>
       </div>
