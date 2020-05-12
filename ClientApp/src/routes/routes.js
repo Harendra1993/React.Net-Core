@@ -1,9 +1,16 @@
 import { lazy } from 'react';
 
-import { Home } from '@/components/Home';
-const Login = lazy(() => import('@/components/account/Login'));
-const CreateAccount = lazy(() => import('@/components/account/Create'));
-const ListAccounts = lazy(() => import('@/components/account/List'));
+import { Home } from '@/pages/Home';
+const Login = lazy(() => import('@/pages/account/Login'));
+const CreateAccount = lazy(() => import('@/pages/account/Create'));
+const ListAccounts = lazy(() => import('@/pages/account/List'));
+
+// function page(path) {
+//   return () =>
+//     import( /* webpackChunkName: '' */ `@/pages/${path}`).then(
+//       m => m.default || m
+//     );
+// }
 
 export const pages = [
     {
