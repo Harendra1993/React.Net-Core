@@ -57,7 +57,7 @@ function Routes() {
                                 />
                             );
                         })}
-                        <Redirect to="/" />
+                        <Redirect to="/login" />
                     </Switch>
                 </div>
             )}

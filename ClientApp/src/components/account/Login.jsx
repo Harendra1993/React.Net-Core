@@ -7,10 +7,9 @@ import { authenticationService } from '@/services';
 class Login extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this)
         // redirect to home if already logged in
         if (authenticationService.currentUserValue) {
-            // this.props.history.push('/');
+            this.props.history.push('/');
         }
     }
     render() {
