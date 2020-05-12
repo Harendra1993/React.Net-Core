@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as Icon from 'react-feather';
+import { authenticationService } from '@/services';
 //import { Link } from 'react-router-dom';
 import './TopMenu.css';
 
@@ -8,30 +9,30 @@ export default class TopMenu extends Component {
   constructor(props) {
     super(props);
 
-    this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      currentUser: authenticationService.currentUserValue
     };
   }
 
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  }
 
   render() {
+    const { currentUser } = this.state;
+
     return (
       <>
         <nav className="navbar navbar-expand-lg main-navbar sticky">
           <div className="form-inline mr-auto">
             <ul className="navbar-nav mr-3">
               <li>
-                <a href="#" data-toggle="sidebar" className="nav-link nav-link-lg
-									collapse-btn"> <Icon.AlignJustify className="feather" /></a></li>
-              <li><a href="#" className="nav-link nav-link-lg fullscreen-btn">
-                <i data-feather="maximize" />
-              </a></li>
+                <a data-toggle="sidebar" className="nav-link nav-link-lg collapse-btn">
+                  <Icon.AlignJustify className="feather" />
+                </a>
+              </li>
+              <li>
+                <a className="nav-link nav-link-lg fullscreen-btn">
+                  <Icon.Maximize className="feather" />
+                </a>
+              </li>
               <li>
                 <form className="form-inline mr-auto">
                   <div className="search-element">
@@ -152,7 +153,7 @@ export default class TopMenu extends Component {
             </li>
             <li className="dropdown"><a href="#" data-toggle="dropdown" className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png" className="user-img-radious-style" /> <span className="d-sm-none d-lg-inline-block" /></a>
               <div className="dropdown-menu dropdown-menu-right pullDown">
-                <div className="dropdown-title">Hello Sarah Smith</div>
+                {/* <div className="dropdown-title">Hello {currentUser.username}</div> */}
                 <a href="profile.html" className="dropdown-item has-icon"> <i className="far
 										fa-user" /> Profile
               </a> <a href="timeline.html" className="dropdown-item has-icon"> <i className="fas fa-bolt" />

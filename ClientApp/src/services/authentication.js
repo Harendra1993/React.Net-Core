@@ -1,4 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
+import Cookies from 'js-cookie';
 
 import config from '@/config';
 import { handleResponse } from '@/utils';
@@ -9,7 +10,8 @@ export const authenticationService = {
     login,
     logout,
     currentUser: currentUserSubject.asObservable(),
-    get currentUserValue() { return currentUserSubject.value }
+    get currentUserValue() { return currentUserSubject.value },
+    token: Cookies.get('token')
 };
 
 function login(username, password) {
