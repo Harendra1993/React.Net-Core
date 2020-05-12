@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { pages } from './routes'
+import { routes } from './routes'
 
 function Routes() {
 
@@ -8,7 +8,7 @@ function Routes() {
         <Route
             render={({ location }) => (
                 <Switch location={location}>
-                    {pages.map((page, index) => {
+                    {routes.map((page, index) => {
                         return (
                             <Route
                                 exact

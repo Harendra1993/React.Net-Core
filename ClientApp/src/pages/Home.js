@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Default } from "@/layouts";
 
-export class Home extends Component {
+export default class Home extends Component {
   static displayName = Home.name;
 
   render() {
