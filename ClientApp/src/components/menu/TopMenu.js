@@ -153,7 +153,7 @@ export default class TopMenu extends Component {
             </li>
             <li className="dropdown"><a href="#" data-toggle="dropdown" className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png" className="user-img-radious-style" /> <span className="d-sm-none d-lg-inline-block" /></a>
               <div className="dropdown-menu dropdown-menu-right pullDown">
-                <div className="dropdown-title">Hello {(currentUser.userName) ? currentUser.userName : ''}</div>
+                <div className="dropdown-title">Hello {(currentUser) ? currentUser.userName : ''}</div>
                 <a href="profile.html" className="dropdown-item has-icon"> <i className="far
 										fa-user" /> Profile
               </a> <a href="timeline.html" className="dropdown-item has-icon"> <i className="fas fa-bolt" />

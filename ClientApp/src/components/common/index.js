@@ -1,3 +1,4 @@
 import TextInput from "./TextInput";
+import PrivateRoute from "./PrivateRoute";
 
-export { TextInput }
+export { TextInput, PrivateRoute }

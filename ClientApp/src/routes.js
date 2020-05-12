@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import { authenticationService } from '@/services'
 
 import { Home } from './components/Home';
 const Login = lazy(() => import('./components/account/Login'));
