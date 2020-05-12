@@ -1,5 +1,5 @@
 import React from 'react'
-import { Default } from "../layouts";
+import { Default } from "@/layouts";
 
 export default function List() {
     return (

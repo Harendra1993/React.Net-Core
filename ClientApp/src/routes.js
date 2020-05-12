@@ -42,24 +42,21 @@ function Routes() {
     return (
         <Route
             render={({ location }) => (
-
-                <div className="Almighty-Router">
-                    <Switch location={location}>
-                        {pages.map((page, index) => {
-                            return (
-                                <Route
-                                    exact
-                                    path={page.pageLink}
-                                    render={(props) => (
-                                        <page.view {...props} key={props.match.params.stateCode || index} />
-                                    )}
-                                    key={index}
-                                />
-                            );
-                        })}
-                        <Redirect to="/login" />
-                    </Switch>
-                </div>
+                <Switch location={location}>
+                    {pages.map((page, index) => {
+                        return (
+                            <Route
+                                exact
+                                path={page.pageLink}
+                                render={(props) => (
+                                    <page.view {...props} key={props.match.params.stateCode || index} />
+                                )}
+                                key={index}
+                            />
+                        );
+                    })}
+                    <Redirect to="/login" />
+                </Switch>
             )}
         />
     )

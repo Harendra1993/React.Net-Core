@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
 import PropTypes from "prop-types"
 
-import { TopMenu, SideMenu } from '../menu';
+import { TopMenu, SideMenu } from '../components/menu';
 
 export class Default extends Component {
   static displayName = Default.name;
@@ -12,9 +11,9 @@ export class Default extends Component {
       <div className="main-wrapper main-wrapper-1">
         <TopMenu />
         <SideMenu />
-        <Container>
+        <div class="main-content" style={{ minHeight: "356px" }}>
           {this.props.children}
-        </Container>
+        </div>
       </div>
     );
   }
