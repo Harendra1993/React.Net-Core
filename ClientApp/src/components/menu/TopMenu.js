@@ -58,40 +58,11 @@ export default class TopMenu extends Component {
                 </div>
                 <div className="dropdown-list-content dropdown-list-message">
                   <a href="#" className="dropdown-item"> <span className="dropdown-item-avatar
-											text-white"> <img alt="image" src="assets/img/users/user-1.png" className="rounded-circle" />
+											text-white"> <img alt="image" src="{require('@/assets/img/users/user-1.png')} " className="rounded-circle" />
                   </span> <span className="dropdown-item-desc"> <span className="message-user">John
                       Deo</span>
                       <span className="time messege-text">Please check your mail !!</span>
                       <span className="time">2 Min Ago</span>
-                    </span>
-                  </a> <a href="#" className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-2.png" className="rounded-circle" />
-                  </span> <span className="dropdown-item-desc"> <span className="message-user">Sarah
-                      Smith</span> <span className="time messege-text">Request for leave
-                      application</span>
-                      <span className="time">5 Min Ago</span>
-                    </span>
-                  </a> <a href="#" className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-5.png" className="rounded-circle" />
-                  </span> <span className="dropdown-item-desc"> <span className="message-user">Jacob
-                      Ryan</span> <span className="time messege-text">Your payment invoice is
-                      generated.</span> <span className="time">12 Min Ago</span>
-                    </span>
-                  </a> <a href="#" className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-4.png" className="rounded-circle" />
-                  </span> <span className="dropdown-item-desc"> <span className="message-user">Lina
-                      Smith</span> <span className="time messege-text">hii John, I have upload
-                      doc
-                      related to task.</span> <span className="time">30
-                      Min Ago</span>
-                    </span>
-                  </a> <a href="#" className="dropdown-item"> <span className="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-3.png" className="rounded-circle" />
-                  </span> <span className="dropdown-item-desc"> <span className="message-user">Jalpa
-                      Joshi</span> <span className="time messege-text">Please do as specify.
-                      Let me
-                      know if you have any query.</span> <span className="time">1
-                      Days Ago</span>
                     </span>
                   </a> <a href="#" className="dropdown-item"> <span className="dropdown-item-avatar text-white">
                     <img alt="image" src="assets/img/users/user-2.png" className="rounded-circle" />
@@ -151,7 +122,7 @@ export default class TopMenu extends Component {
                 </div>
               </div>
             </li>
-            <li className="dropdown"><a href="#" data-toggle="dropdown" className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png" className="user-img-radious-style" /> <span className="d-sm-none d-lg-inline-block" /></a>
+            <li className="dropdown"><a href="#" data-toggle="dropdown" className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="{require('assets/img/user.png')}" className="user-img-radious-style" /> <span className="d-sm-none d-lg-inline-block" /></a>
               <div className="dropdown-menu dropdown-menu-right pullDown">
                 <div className="dropdown-title">Hello {(currentUser) ? currentUser.userName : ''}</div>
                 <a href="profile.html" className="dropdown-item has-icon"> <i className="far
