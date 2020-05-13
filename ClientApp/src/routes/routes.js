@@ -13,7 +13,8 @@ export const routes = [
         view: page('account/Login'),
         displayName: 'Login',
         animationDelayForNavbar: 0.3,
-        showInNavbar: true,
+        showInNavbar: false,
+        public: true
     },
     {
         pageLink: '/account/create',

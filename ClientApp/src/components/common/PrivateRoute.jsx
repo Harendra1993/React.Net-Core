@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 import { authenticationService } from '@/services';
 
-export const PrivateRoute = ({ component: Component, roles, ...rest }) => (
+const PrivateRoute = ({ component: Component, roles, ...rest }) => (
     <Route {...rest} render={props => {
         const currentUser = authenticationService.currentUserValue;
         if (!currentUser) {
@@ -21,3 +21,5 @@ export const PrivateRoute = ({ component: Component, roles, ...rest }) => (
         return <Component {...props} />
     }} />
 )
+
+export default PrivateRoute;

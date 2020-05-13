@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import { PrivateRoute } from '@/components/common'
 import { routes } from './routes'
 
 function Routes() {
@@ -9,8 +10,10 @@ function Routes() {
             render={({ location }) => (
                 <Switch location={location}>
                     {routes.map((page, index) => {
+                        const CustomRoute = (page.public) ? Route : PrivateRoute;
+
                         return (
-                            <Route
+                            <CustomRoute
                                 exact
                                 path={page.pageLink}
                                 render={(props) => (
@@ -19,8 +22,9 @@ function Routes() {
                                 key={index}
                             />
                         );
+
                     })}
-                    <Redirect to="/login" />
+                    <Redirect to="/" />
                 </Switch>
             )}
         />
