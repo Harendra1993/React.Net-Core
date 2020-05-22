@@ -1,4 +1,4 @@
-# ASP.NET Core & Vue.js Starter Application using MySql
+# AASP.NET Core and React using MySql Databae
 
 ASP.NET Core and React using MySql Databae - with Webpack (with HMR), Web API, Entity Framework and Auto Mapper using Repository Pattern and Unit of Work.
 
@@ -28,7 +28,7 @@ ASP.NET Core and React using MySql Databae - with Webpack (with HMR), Web API, E
 
 - Clone this repository : `$ git clone https://github.com/Harendra1993/React.Net-Core.git`
 - `$ cd React.Net-Core/`
-- `$ npm i --prefix src/VueDotNetCoreMySql.App/ && dotnet restore`
+- `$ npm i && dotnet restore`
 - (If using VSCode) `$ code .`
 - (If using Visual Studio) Open the `*.sln` file with "Open project" from Visual Studio IDE
 
