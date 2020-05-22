@@ -1,17 +1,27 @@
 import React, { Component } from "react";
 import * as Icon from "react-feather";
 import { authenticationService } from "@/services";
-//import { Link } from 'react-router-dom';
+
+import { withRouter } from "react-router-dom";
+
 import "./TopMenu.css";
 import user from "@/assets/img/user.png";
 
-export default class TopMenu extends Component {
+class TopMenu extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       currentUser: authenticationService.currentUserValue,
     };
+
+    this.logout = this.logout.bind(this);
+  }
+
+  logout() {
+    authenticationService.logout();
+    this.props.history.push("/login");
+    window.location.reload();
   }
 
   render() {
@@ -24,6 +34,7 @@ export default class TopMenu extends Component {
             <ul className="navbar-nav mr-3">
               <li>
                 <a
+                  href="!#"
                   data-toggle="sidebar"
                   className="nav-link nav-link-lg collapse-btn"
                 >
@@ -92,7 +103,7 @@ export default class TopMenu extends Component {
                 </a>
                 <div className="dropdown-divider" />
                 <a
-                  href="auth-login.html"
+                  onClick={this.logout}
                   className="dropdown-item has-icon text-danger"
                 >
                   {" "}
@@ -107,3 +118,5 @@ export default class TopMenu extends Component {
     );
   }
 }
+
+export default withRouter(TopMenu);

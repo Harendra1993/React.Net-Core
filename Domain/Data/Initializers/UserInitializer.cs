@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PPR.Domain.Models;
+using App.Domain.Models;
 
-namespace PPR.Domain.Data.Initializers
+namespace App.Domain.Data.Initializers
 {
     public class UserInitializer : IEntityTypeConfiguration<User>
     {

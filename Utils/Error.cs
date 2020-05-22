@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 
-namespace PPR.Utils
+namespace App.Utils
 {
     public class Error
     {

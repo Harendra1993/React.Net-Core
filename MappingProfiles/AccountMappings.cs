@@ -1,9 +1,9 @@
 using AutoMapper;
-using PPR.App.DTOs;
-using PPR.App.DTOs.User;
-using PPR.Domain.Models;
+using App.App.DTOs;
+using App.App.DTOs.User;
+using App.Domain.Models;
 
-namespace PPR.App.MappingProfiles
+namespace App.App.MappingProfiles
 {
     public class AccountMappings : Profile
     {

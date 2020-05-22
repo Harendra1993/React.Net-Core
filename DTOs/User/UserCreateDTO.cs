@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PPR.App.DTOs.User
+namespace App.App.DTOs.User
 {
     public class UserCreateDTO
     {

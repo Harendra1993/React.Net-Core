@@ -1,4 +1,4 @@
-namespace PPR.App.DTOs {
+namespace App.App.DTOs {
     public class WeatherForecast {
         public string DateFormatted { get; set; }
 

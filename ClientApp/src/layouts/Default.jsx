@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from "prop-types"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { TopMenu, SideMenu } from '../components/menu';
+import { TopMenu, SideMenu } from "../components/menu";
 
 export class Default extends Component {
   static displayName = Default.name;
 
-  render() {
+  render(props) {
     return (
       <div className="main-wrapper main-wrapper-1">
         <TopMenu />
@@ -21,6 +21,6 @@ export class Default extends Component {
 
 Default.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Default
+export default Default;

@@ -1,13 +1,13 @@
 using System.Security.Claims;
 using System;
 using Microsoft.Extensions.Configuration;
-using PPR.App.DTOs.User;
+using App.App.DTOs.User;
 using System.IdentityModel.Tokens.Jwt;
-using PPR.Domain.Models;
+using App.Domain.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace PPR.App.JwtHelpers
+namespace App.App.JwtHelpers
 {
 
     public static class JwtExtensions

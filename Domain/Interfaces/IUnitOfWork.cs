@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace PPR.Domain.Interfaces {
+namespace App.Domain.Interfaces {
     public interface IUnitOfWork {
         Task CompleteAsync ();
     }

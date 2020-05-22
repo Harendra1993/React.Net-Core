@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PPR.App.DTOs.User;
+using App.App.DTOs.User;
 
-namespace PPR.App.DTOs
+namespace App.App.DTOs
 {
     public class RoleDTO
     {

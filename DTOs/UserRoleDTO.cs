@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PPR.App.DTOs {
+namespace App.App.DTOs {
     public class UserRoleDTO {
         [Key]
         public int UserRoleId { get; set; }

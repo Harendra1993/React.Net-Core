@@ -1,6 +1,6 @@
 using System;
 
-namespace PPR.Utils
+namespace App.Utils
 {
     public static class Global
     {

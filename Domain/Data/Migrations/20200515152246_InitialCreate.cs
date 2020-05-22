@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace PPR.Domain.Data.Migrations
+namespace App.Domain.Data.Migrations
 {
     public partial class InitialCreate : Migration
     {

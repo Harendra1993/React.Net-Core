@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using PPR.App.JwtHelpers;
-using PPR.Domain.Models;
-using PPR.DTOs;
-using PPR.Utils;
+using App.App.JwtHelpers;
+using App.Domain.Models;
+using App.DTOs;
+using App.Utils;
 
-namespace PPR.Controllers {
+namespace App.Controllers {
     [Route ("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase {

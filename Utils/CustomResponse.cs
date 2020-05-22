@@ -1,4 +1,4 @@
-namespace PPR.Utils
+namespace App.Utils
 {
     public class CustomResponse<T>
     {

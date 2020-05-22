@@ -1,8 +1,8 @@
 module.exports = {
-    app: {
-        name: "PPR"
-    },
-    api: {
-        url: "https://localhost:5001/api"
-    }
-}
+  app: {
+    name: "App",
+  },
+  api: {
+    url: "https://localhost:5001/api",
+  },
+};

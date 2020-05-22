@@ -13,11 +13,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using PPR.App.MappingProfiles;
-using PPR.Domain.Data;
-using PPR.Domain.Models;
+using App.App.MappingProfiles;
+using App.Domain.Data;
+using App.Domain.Models;
 
-namespace PPR
+namespace App
 {
     public class Startup
     {

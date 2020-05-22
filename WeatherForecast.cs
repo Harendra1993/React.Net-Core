@@ -1,6 +1,6 @@
 using System;
 
-namespace PPR
+namespace App
 {
     public class WeatherForecast
     {

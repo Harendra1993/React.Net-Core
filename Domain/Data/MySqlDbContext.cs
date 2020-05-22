@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using PPR.Domain.Data.Initializers;
-using PPR.Domain.Models;
+using App.Domain.Data.Initializers;
+using App.Domain.Models;
 
-namespace PPR.Domain.Data
+namespace App.Domain.Data
 {
     public class MySqlDbContext : IdentityDbContext<User, Role, int>
     {

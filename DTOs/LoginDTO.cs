@@ -1,4 +1,4 @@
-namespace PPR.DTOs
+namespace App.DTOs
 {
     public class LoginDTO
     {
