@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 import { TopMenu, SideMenu } from "../components/menu";
 
-export class Default extends Component {
-  static displayName = Default.name;
+export class DefaultLayout extends Component {
+  static displayName = DefaultLayout.name;
 
   render(props) {
     return (
@@ -19,8 +19,8 @@ export class Default extends Component {
   }
 }
 
-Default.propTypes = {
+DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Default;
+export default DefaultLayout;

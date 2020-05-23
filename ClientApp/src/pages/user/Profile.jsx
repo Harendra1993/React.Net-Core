@@ -1,12 +1,12 @@
 import React from "react";
-import { Default } from "@/layouts";
+import { DefaultLayout } from "@/layouts";
 
 import "@/assets/sass/author.scss";
 import user from "@/assets/img/user.png";
 
 export default function Profile() {
   return (
-    <Default>
+    <DefaultLayout>
       <section className="section">
         <div className="section-body">
           <div className="row mt-sm-4">
@@ -568,6 +568,6 @@ export default function Profile() {
           </div>
         </div>
       </section>
-    </Default>
+    </DefaultLayout>
   );
 }

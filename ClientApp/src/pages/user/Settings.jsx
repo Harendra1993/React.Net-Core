@@ -1,9 +1,9 @@
 import React from "react";
-import { Default } from "@/layouts";
+import { DefaultLayout } from "@/layouts";
 
 export default function Settings() {
   return (
-    <Default>
+    <DefaultLayout>
       {" "}
       <section className="section">
         <div className="container">
@@ -70,6 +70,6 @@ export default function Settings() {
           </div>
         </div>
       </section>
-    </Default>
+    </DefaultLayout>
   );
 }

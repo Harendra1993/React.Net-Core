@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Default } from "@/layouts";
+import { DefaultLayout } from "@/layouts";
 
 export default class Home extends Component {
   static displayName = Home.name;
 
   render() {
     return (
-      <Default>
+      <DefaultLayout>
         <div className="Home">
           <h1>Hello, world!</h1>
           <p>Welcome to your new single-page application, built with:</p>
@@ -56,7 +56,7 @@ export default class Home extends Component {
             <code>npm install</code>.
           </p>
         </div>
-      </Default>
+      </DefaultLayout>
     );
   }
 }

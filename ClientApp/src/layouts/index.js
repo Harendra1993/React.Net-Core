@@ -1,4 +1,4 @@
-import Default from "./Default";
-import Blank from "./Blank";
+import DefaultLayout from "./DefaultLayout";
+import BlankLayout from "./BlankLayout";
 
-export { Default, Blank }
+export { DefaultLayout, BlankLayout };

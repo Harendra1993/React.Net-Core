@@ -1,10 +1,10 @@
 import React from "react";
-import { Default } from "@/layouts";
+import { DefaultLayout } from "@/layouts";
 import "@/assets/sass/activities.scss";
 
 export default function List() {
   return (
-    <Default>
+    <DefaultLayout>
       <section class="section">
         <div class="section-body">
           <h2 class="section-title">September 2018</h2>
@@ -265,6 +265,6 @@ export default function List() {
           </div>
         </div>
       </section>
-    </Default>
+    </DefaultLayout>
   );
 }
