@@ -1,5 +1,4 @@
 import React from "react";
-import { DefaultLayout } from "@/layouts";
 
 export default function StatisticsCards() {
   return (
@@ -21,7 +20,7 @@ export default function StatisticsCards() {
                   </div>
                   <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                     <div className="banner-img">
-                      <img src="assets/img/banner/1.png" alt="" />
+                      <img src={require("@/assets/img/banner/1.png")} alt="" />
                     </div>
                   </div>
                 </div>
@@ -45,7 +44,7 @@ export default function StatisticsCards() {
                   </div>
                   <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                     <div className="banner-img">
-                      <img src="assets/img/banner/2.png" alt="" />
+                      <img src={require("assets/img/banner/2.png")} alt="" />
                     </div>
                   </div>
                 </div>
@@ -70,7 +69,7 @@ export default function StatisticsCards() {
                   </div>
                   <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                     <div className="banner-img">
-                      <img src="assets/img/banner/3.png" alt="" />
+                      <img src={require("assets/img/banner/3.png")} alt="" />
                     </div>
                   </div>
                 </div>
@@ -94,7 +93,7 @@ export default function StatisticsCards() {
                   </div>
                   <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                     <div className="banner-img">
-                      <img src="assets/img/banner/4.png" alt="" />
+                      <img src={require("assets/img/banner/4.png")} alt="" />
                     </div>
                   </div>
                 </div>
