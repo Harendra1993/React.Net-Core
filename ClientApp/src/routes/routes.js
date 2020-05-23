@@ -3,7 +3,7 @@ import { lazy } from "react";
 export const routes = [
   {
     pageLink: "/",
-    view: page("Home"),
+    view: page("dashboard"),
     displayName: "Home",
     animationDelayForNavbar: 0.2,
     showInNavbar: true,
