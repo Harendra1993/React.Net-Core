@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as Icon from "react-feather";
 import { authenticationService } from "@/services";
 
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 import "./TopMenu.css";
 import user from "@/assets/img/user.png";
@@ -83,24 +83,18 @@ class TopMenu extends Component {
                 <div className="dropdown-title">
                   Hello {currentUser ? currentUser.userName : ""}
                 </div>
-                <a href="profile.html" className="dropdown-item has-icon">
+                <Link to="/user/profile" className="dropdown-item has-icon">
                   {" "}
-                  <i
-                    className="far
-										fa-user"
-                  />{" "}
-                  Profile
-                </a>{" "}
-                <a href="timeline.html" className="dropdown-item has-icon">
+                  <i className="far fa-user" /> Profile
+                </Link>
+                <Link to="/user/activites" className="dropdown-item has-icon">
                   {" "}
-                  <i className="fas fa-bolt" />
-                  Activities
-                </a>{" "}
-                <a href="#" className="dropdown-item has-icon">
+                  <i className="far fa-bolt" /> Activities
+                </Link>
+                <Link to="/user/settings" className="dropdown-item has-icon">
                   {" "}
-                  <i className="fas fa-cog" />
-                  Settings
-                </a>
+                  <i className="far fa-cog" /> Settings
+                </Link>
                 <div className="dropdown-divider" />
                 <a
                   onClick={this.logout}
