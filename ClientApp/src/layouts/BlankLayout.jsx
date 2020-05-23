@@ -18,4 +18,4 @@ BlankLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Blank;
+export default BlankLayout;
