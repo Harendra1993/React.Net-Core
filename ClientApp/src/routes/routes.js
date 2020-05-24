@@ -45,6 +45,10 @@ export const routes = [
     animationDelayForNavbar: 0.5,
     showInNavbar: true,
   },
+  {
+    pageLink: "*",
+    view: page("errors/NotFound"),
+  },
 ];
 
 function page(path) {
